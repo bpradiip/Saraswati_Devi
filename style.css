@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.fold-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) skewY(0deg) rotateX(0deg);
+  width: 220px;
+  height: 400px;
+  /* background: #ccc; */
+  background: url(saraswatidevi.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  border-top: 10px solid #ff7703;
+  border-bottom: 10px solid #ff7703;
+  box-sizing: border-box;
+  transition: 1s;
+}
+.fold-image:hover {
+  transform: translate(-50%, -50%) skewY(15deg) rotateX(15deg);
+}
+.fold-image:before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: calc(100% + 20px);
+  top: -10px;
+  left: -80%;
+  background: url(saraswatidevi.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  border-top: 10px solid #ff7703;
+  border-bottom: 10px solid #ff7703;
+  border-left: 10px solid #ff7703;
+  box-sizing: border-box;
+  transform: perspective(1000px) skewY(-25deg) rotateY(-90deg);
+  transform-origin: right;
+  box-shadow: inset -15px 0 15px rgba(0, 0, 0, 0.15);
+  transition: 1s;
+}
+.fold-image:hover:before {
+  transform: perspective(1000px) skewY(-25deg) rotateY(0deg);
+}
+
+.fold-image:after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: calc(100% + 20px);
+  top: -10px;
+  right: -80%;
+  background: url(saraswatidevi.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  border-top: 10px solid #ff7703;
+  border-bottom: 10px solid #ff7703;
+  border-right: 10px solid #ff7703;
+  box-sizing: border-box;
+  transform: perspective(1000px) skewY(-25deg) rotateY(-90deg);
+  transform-origin: left;
+  box-shadow: inset 15px 0 15px rgba(0, 0, 0, 0.15);
+  transition: 1s;
+}
+.fold-image:hover:after {
+  transform: perspective(1000px) skewY(-25deg) rotateY(0deg);
+}
